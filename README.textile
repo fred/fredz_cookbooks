@@ -1,0 +1,64 @@
+h3. Sample Roles file
+
+Some recipes are from Opscode, some are from this repo.
+
+<pre>
+  # File: CHEF_HOME/roles/base.json
+  {
+    "name": "base",
+    "description": "This role is the bootstrap for every server, putting admin accounts on it, installing debian/ubuntu sources file, update/upgrade, install networking tools and install libraries for ruby.", 
+    "default_attributes": {
+      "chef": {
+        "server_url": "https://api.opscode.com/organizations/YOUR_ORG",
+        "cache_path": "/var/chef/cache",
+        "backup_path": "/var/chef/backup",
+        "validation_client_name": "YOUR_ORG-validator",
+        "run_path": "/var/chef"
+      },
+      "groups" : {
+        "admin" : {
+          "gid" : 7000 
+        }
+      },
+      "active_groups" : [
+        "admin" 
+      ],
+      "active_users" : [
+        "fred"
+        ],
+      "users" : {
+        "fred" : {
+          "password" : "from {openssl passwd -1}",
+          "comment" : "Fred",
+          "uid" : 7001,
+          "groups" : [
+            "admin"
+          ]
+        }
+      },
+      "ssh_keys" : {
+        "fred" : "ssh-rsa AAAAB3N......== fred@Freds-MacBook-Pro.local"
+      }
+    },
+    "json_class": "Chef::Role",
+    "run_list": [
+      "recipe[build-essential::default]",
+      "recipe[debian_basic::default]",
+      "recipe[networking_basic::default]",
+      "recipe[openssl::default]",
+      "recipe[ntp::default]",
+      "recipe[git::default]",
+      "recipe[subversion::client]",
+      "recipe[screen::default]",
+      "recipe[ruby:default]",
+      "recipe[rubygems:default]",
+      "recipe[ruby:source]",
+      "recipe[rubygems:default]",
+      "recipe[users]",
+      "recipe[mysql::server]"
+    ],
+    "chef_type": "role",
+    "override_attributes": {
+    }
+  }
+</pre>
