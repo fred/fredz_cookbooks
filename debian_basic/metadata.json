@@ -1,0 +1,35 @@
+{
+    "version": "0.0.2",
+    "maintainer": "fredz",
+    "replacing": {
+    },
+    "description": "Install Basic Packages on a Debian 5 and Ubuntu 10.04 Server",
+    "recipes": {
+    },
+    "maintainer_email": "fred@frederico-araujo.com",
+    "groupings": {
+    },
+    "long_description": "= DESCRIPTION: \n\nInstall some basic packages on a debian/ubuntu server \n\n= REQUIREMENTS: \n\n* none\n\n== Platform:\n\nDebian and Ubuntu.\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+    "attributes": {
+    },
+    "recommendations": {
+    },
+    "dependencies": {
+    },
+    "suggestions": {
+    },
+    "conflicting": {
+    },
+    "license": "Apache 2.0",
+    "name": "debian_basic",
+    "providing": {
+    },
+    "platforms": {
+      "debian": [
+
+      ],
+      "ubuntu": [
+
+      ]
+    }
+  }

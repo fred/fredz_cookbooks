@@ -1,0 +1,29 @@
+{
+    "version": "0.1.0",
+    "maintainer": "37signals",
+    "replacing": {
+    },
+    "description": "Configures users and groups",
+    "recipes": {
+    },
+    "maintainer_email": "sysadmins@37signals.com",
+    "groupings": {
+    },
+    "long_description": "",
+    "attributes": {
+    },
+    "recommendations": {
+    },
+    "dependencies": {
+    },
+    "suggestions": {
+    },
+    "conflicting": {
+    },
+    "license": "Apache v2.0",
+    "name": "users",
+    "providing": {
+    },
+    "platforms": {
+    }
+  }

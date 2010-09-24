@@ -1,0 +1,57 @@
+# SAFE SEAT BELT
+alias rm='rm -vi'
+alias mv='mv -v'
+alias cp='cp -v'
+alias rm='rm -i'
+
+# LS aliases
+alias l='ls -CF'
+alias ls='ls --color'
+alias la='ls -a'
+alias ll='ls -al'
+alias llx='ls -lXB'             # sort by extension
+alias lls='ls -alShr'           # sort by size
+alias llc='ls -lcr'             # sort by change time
+alias llu='ls -lur'             # sort by access time
+alias llr='ls -alR'             # recursive ls
+alias llt='ls -altr'            # sort by date
+alias llta='ls -latr'           # sort by date
+alias llm='ls -al | less -r'    # pipe through 'less'
+alias lltm='ls -alt | less -r'  # pipe through 'less'
+alias llsm='ls -alSh | less -r' # pipe through 'less'
+alias treeX='tree -Csu'         # nice alternative to 'ls'
+
+# GENERAL
+alias grep='grep --colour=auto'
+alias i='/sbin/ifconfig'
+alias du='du -sm'           # show by Mb
+alias tu='top -o cpu'       # by CPU usage
+alias tm='top -o vsize'     # by Memory Usage
+alias xs='cd'
+alias vf='cd'
+alias moer='more'
+alias moew='more'
+alias kk='ll'
+alias i='/sbin/ifconfig'
+alias du='du -s'
+alias free='free -m'
+alias xs='cd'
+alias vf='cd'
+alias moer='more'
+alias moew='more'
+
+
+# SYSTEM
+alias last_modified='find / -daystart -mtime 0'
+alias es='netstat -na |grep -i esta |grep -v 127.0.0.1 |sort -n -t. -k2'
+alias li='netstat -na |grep -i list |grep -v 127.0.0.1 |sort -n -t. -k2'
+alias cls='clear;ls'
+alias find-guidsuid='/usr/bin/find / -type f \( -perm -004000 -o -perm -002000 \) -exec ls -lg {} \; 2>/dev/null > /root/suidfiles.txt'
+alias find-multilinks-guidsuid='find / -type f \( -perm -004000 -o -perm -002000 \) -links +1 -ls'
+alias last_modified='find / -daystart -mtime 0'
+alias lpall='lpstat -a -l -u -t -s -v'
+alias logout='clear && logout'
+
+# To search the bash history (including current buffer) for a command that was ran.
+# eg "hg smbmount", then use "!" where is the history number, which saves typing it all again.
+alias hg='history | grep --color '

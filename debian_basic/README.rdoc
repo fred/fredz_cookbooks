@@ -1,0 +1,16 @@
+= DESCRIPTION: 
+
+Install some basic packages on a debian/ubuntu server 
+
+= REQUIREMENTS: 
+
+* none
+
+== Platform:
+
+Debian and Ubuntu.
+
+= ATTRIBUTES:
+
+= USAGE:
+

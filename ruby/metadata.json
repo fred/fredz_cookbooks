@@ -1,0 +1,96 @@
+{
+    "version": "0.9.0",
+    "maintainer": "Frederico Araujo,",
+    "replacing": {
+    },
+    "description": "Installs ruby packages from bin deb. or source",
+    "recipes": {
+      "ruby::source": "Installs ruby from source",
+      "ruby": "Installs ruby bin deb. packages"
+    },
+    "maintainer_email": "fred@frederico-araujo.com",
+    "groupings": {
+    },
+    "long_description": "",
+    "attributes": {
+      "ruby/configure_flags": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": [
+          "--prefix=[install_path]",
+          "--enable-shared"
+        ],
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Configure Flags",
+        "display_name": "Configure Flags"
+      },
+      "ruby/version": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "1.9.1-p430",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Main Ruby Version, including patch version. ie. 1.9.1-p430",
+        "display_name": "Ruby Version"
+      },
+      "ruby/install_path": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "/usr/local",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Location to install ruby from source",
+        "display_name": "Installation Path"
+      },
+      "ruby/gem_version": {
+        "required": "optional",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "default": "1.3.7",
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "Rubygems version to download and install",
+        "display_name": "RubyGem Version"
+      }
+    },
+    "recommendations": {
+    },
+    "dependencies": {
+    },
+    "suggestions": {
+    },
+    "conflicting": {
+    },
+    "license": "Apache 2.0",
+    "name": "ruby",
+    "providing": {
+    },
+    "platforms": {
+      "debian": [
+
+      ],
+      "ubuntu": [
+
+      ]
+    }
+  }
