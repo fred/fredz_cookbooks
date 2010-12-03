@@ -61,13 +61,15 @@ bind-address            = <%= node[:mysql][:bind_address] %>
 key_buffer              = <%= node[:mysql][:tunable][:key_buffer] %>
 max_allowed_packet      = 16M
 thread_stack            = 128K
-thread_cache_size       = 8
+thread_cache_size       = <%= node[:mysql][:tunable][:thread_cache_size] %>
 # This replaces the startup script and checks MyISAM tables if needed
 # the first time they are touched
 myisam-recover          = BACKUP
-#max_connections        = 100
-#table_cache            = 64
-#thread_concurrency     = 10
+max_connections         = <%= node[:mysql][:tunable][:max_connections] %>
+table_cache             = <%= node[:mysql][:tunable][:table_cache] %>
+
+thread_concurrency      = <%= node[:mysql][:tunable][:thread_concurrency] %>
+
 max_connections         = <%= node[:mysql][:tunable][:max_connections] %>
 wait_timeout            = <%= node[:mysql][:tunable][:wait_timeout] %>
 net_read_timeout        = <%= node[:mysql][:tunable][:net_read_timeout] %>
@@ -79,8 +81,9 @@ max_heap_table_size     = <%= node[:mysql][:tunable][:max_heap_table_size] %>
 #
 # * Query Cache Configuration
 #
-query_cache_limit       = 1M
-query_cache_size        = 16M
+query_cache_limit       = <%= node[:mysql][:tunable][:query_cache_limit] %>
+query_cache_size        = <%= node[:mysql][:tunable][:query_cache_size] %>
+
 #
 # * Logging and Replication
 #

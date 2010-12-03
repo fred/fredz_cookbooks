@@ -32,7 +32,7 @@ if attribute?(:ec2)
 end
 
 # Tunables
-default[:mysql][:tunable][:key_buffer]          = "16M"
+default[:mysql][:tunable][:key_buffer]          = "32M"
 default[:mysql][:tunable][:max_connections]     = "40"
 default[:mysql][:tunable][:wait_timeout]        = "120"
 default[:mysql][:tunable][:net_read_timeout]    = "30"
@@ -43,7 +43,11 @@ default[:mysql][:tunable][:max_heap_table_size] = "16M"
 
 default[:mysql][:tunable][:thread_cache_size]   = "4"
 default[:mysql][:tunable][:thread_concurrency]  = "2"
-default[:mysql][:tunable][:table_cache]         = "64"
 default[:mysql][:tunable][:query_cache_size]    = "8M"
 default[:mysql][:tunable][:query_cache_limit]   = "2M"
 
+default[:mysql][:tunable][:sort_buffer_size]    = "512K"
+default[:mysql][:tunable][:read_buffer_size]    = "512K"
+default[:mysql][:tunable][:read_rnd_buffer_size]    = "1M"
+default[:mysql][:tunable][:myisam_sort_buffer_size] = "16M"
+default[:mysql][:tunable][:join_buffer_size]    = "256K"

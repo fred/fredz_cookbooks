@@ -62,19 +62,27 @@ key_buffer              = <%= node[:mysql][:tunable][:key_buffer] %>
 max_allowed_packet      = 16M
 thread_stack            = 192K
 thread_cache_size       = <%= node[:mysql][:tunable][:thread_cache_size] %>
+thread_concurrency      = <%= node[:mysql][:tunable][:thread_concurrency] %>
+
 # This replaces the startup script and checks MyISAM tables if needed
 # the first time they are touched
 myisam-recover          = BACKUP
 table_cache             = <%= node[:mysql][:tunable][:table_cache] %>
-thread_concurrency      = <%= node[:mysql][:tunable][:thread_concurrency] %>
+
+# Connections and Timeout
 max_connections         = <%= node[:mysql][:tunable][:max_connections] %>
 wait_timeout            = <%= node[:mysql][:tunable][:wait_timeout] %>
 net_read_timeout        = <%= node[:mysql][:tunable][:net_read_timeout] %>
 net_write_timeout       = <%= node[:mysql][:tunable][:net_write_timeout] %>
 back_log                = <%= node[:mysql][:tunable][:back_log] %>
-table_cache             = <%= node[:mysql][:tunable][:table_cache] %>
+
 max_heap_table_size     = <%= node[:mysql][:tunable][:max_heap_table_size] %>
 
+sort_buffer_size        = <%= node[:mysql][:tunable][:sort_buffer_size] %>
+read_buffer_size        = <%= node[:mysql][:tunable][:read_buffer_size] %>
+read_rnd_buffer_size    = <%= node[:mysql][:tunable][:read_rnd_buffer_size] %>
+myisam_sort_buffer_size = <%= node[:mysql][:tunable][:myisam_sort_buffer_size] %>
+join_buffer_size        = <%= node[:mysql][:tunable][:join_buffer_size] %> 
 #
 # * Query Cache Configuration
 #
