@@ -67,7 +67,7 @@ KeepAliveTimeout <%= node[:apache][:keepalivetimeout] %>
     ServerLimit           <%= node[:apache][:prefork][:serverlimit] %>
     MaxClients            <%= node[:apache][:prefork][:maxclients] %>
     MaxRequestsPerChild   <%= node[:apache][:prefork][:maxrequestsperchild] %>
-</IfModule>
+</IfModule> 
 
 # worker MPM
 # StartServers: initial number of server processes to start

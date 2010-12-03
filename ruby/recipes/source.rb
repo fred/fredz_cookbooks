@@ -37,45 +37,26 @@ packages.each do |pkg|
   package pkg
 end
 
-# Install Ruby now, and rubygems afterward
-rubygems_version  = node[:ruby][:gem_version]
 ruby_version      = node[:ruby][:version]
 configure_flags   = node[:ruby][:configure_flags].join(" ")
+install_path      = node[:ruby][:install_path]
 
-# Getting this error on this code
-# ERROR: Connection refused connecting to ftp.ruby-lang.org:21 for 
-#   pub/ruby/1.9/ruby-1.9.1-p430.tar.gz/ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p430.tar.gz,
-#   retry 1/5
-# remote_file "/tmp/ruby-#{ruby_version}.tar.gz" do
-#   source "ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-#{ruby_version}.tar.gz"
-#   action :create_if_missing
-# end
+remote_file "/tmp/ruby-#{ruby_version}.tar.gz" do
+  source "ftp://ftp.ruby-lang.org/pub/ruby/#{ruby_version[0..2]}/ruby-#{ruby_version}.tar.gz"
+  not_if { ::File.exists?("/tmp/ruby-#{ruby_version}.tar.gz") }
+end
 
 
-# bash "compile_ruby_source" do
-#   cwd "/tmp"
-#   code <<-EOH
-#     rm -rf ruby-#{ruby_version}.tar.gz
-#     wget ftp://ftp.ruby-lang.org/pub/ruby/1.9/ruby-#{ruby_version}.tar.gz
-#     tar xpf ruby-#{ruby_version}.tar.gz
-#     cd ruby-#{ruby_version}
-#     ./configure #{configure_flags}
-#     make && make install
-#   EOH
-# end
-
-# Installs rubygems 1.3.7
-# remote_file "/tmp/rubygems-#{rubygems_version}.tgz" do
-#   source "http://production.cf.rubygems.org/rubygems/rubygems-#{rubygems_version}.tgz"
-#   action :create_if_missing
-# end
-bash "install_rubygems" do
+bash "Compile Ruby #{ruby_version} from source" do
   cwd "/tmp"
   code <<-EOH
-    rm -rf rubygems-#{rubygems_version}.tar.gz
-    wget -c http://production.cf.rubygems.org/rubygems/rubygems-#{rubygems_version}.tgz
-    tar xpf rubygems-#{rubygems_version}.tgz
-    cd rubygems-#{rubygems_version} 
-    /usr/local/bin/ruby ./setup.rb
+    tar xpf ruby-#{ruby_version}.tar.gz
+    cd ruby-#{ruby_version}
+    ./configure #{configure_flags}
+    make && make install
   EOH
+  not_if do
+    ::File.exists?("#{install_path}/bin/ruby") &&
+    system("#{install_path}/bin/ruby --version | grep -q #{ruby_version.gsub('-','')}")
+  end
 end

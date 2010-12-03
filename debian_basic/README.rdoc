@@ -1,6 +1,6 @@
 = DESCRIPTION: 
 
-Install some basic packages on a debian/ubuntu server 
+Boostrap a Debian 5 and Ubuntu 10.04 Server with basic packages and libraries for development and update sources file.
 
 = REQUIREMENTS: 
 

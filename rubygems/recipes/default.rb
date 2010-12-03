@@ -18,10 +18,28 @@
 # limitations under the License.
 #
 
-version = node[:rubygems][:version]
+rubygems_version = node[:rubygems][:version]
 list = node[:rubygems][:install_list]
 opts = node[:rubygems][:extra_opts]
 
+
+# Installs rubygems from tgz download
+remote_file "/tmp/rubygems-#{rubygems_version}.tgz" do
+  source "http://production.cf.rubygems.org/rubygems/rubygems-#{rubygems_version}.tgz"
+  not_if { ::File.exists?("/tmp/rubygems-#{rubygems_version}.tgz") }
+end
+bash "Install Rubygems from Source" do
+  cwd "/tmp"
+  code <<-EOH
+    tar xpf rubygems-#{rubygems_version}.tgz
+    cd rubygems-#{rubygems_version} 
+    ruby ./setup.rb
+  EOH
+  not_if do
+    system("which gem >> /dev/null") &&
+    system("gem --version | grep -q #{rubygems_version}")
+  end
+end
 
 # Safe slow method. Install each gem one by one.
 # if one fails, continue to install next.

@@ -16,10 +16,6 @@ attribute "ruby/version",
   :description => "Main Ruby Version, including patch version. ie. 1.9.1-p430",
   :default => "1.9.1-p430"
 
-attribute "ruby/gem_version",
-  :display_name => "RubyGem Version",
-  :description => "Rubygems version to download and install",
-  :default => "1.3.7"
 
 attribute "ruby/install_path",
   :display_name => "Installation Path",
@@ -30,6 +26,6 @@ attribute "ruby/configure_flags",
   :display_name => "Configure Flags",
   :description => "Configure Flags",
   :default => [
-    "--prefix=[install_path]",
+    "--prefix=ruby[install_path]",
     "--enable-shared"
-  ]
+]
