@@ -1,0 +1,5 @@
+<IfModule mod_rpaf.c>
+RPAFenable On
+RPAFsethostname On
+RPAFproxy_ips <%= node[:apache][:proxy_ip] %>
+</IfModule>

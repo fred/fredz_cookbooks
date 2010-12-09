@@ -1,0 +1,84 @@
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+	KeepAlive On
+	KeepAliveTimeout 5
+	DocumentRoot /var/www/
+	Servername aa.mathaba.net
+	<Directory />
+		Options -Indexes FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/>
+		Options -Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog /var/log/apache2/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	#CustomLog /var/log/apache2/access.log combined
+
+    <Directory /var/www/phpsysinfo>
+        AuthUserFile /etc/apache2/htpasswd
+        AuthGroupFile /dev/null
+        AuthName "Restricted Access"
+        AuthType Basic
+        require valid-user
+    </Directory>
+
+
+    # Monit
+    ProxyPass /monit/ http://127.0.0.1:2812/
+    ProxyPassReverse /monit/ http://127.0.0.1:2812/
+    <Location /monit/>
+        AuthType Basic
+        AuthName "Monit"
+        AuthUserFile /etc/apache2/htpasswd
+        require valid-user
+	    Order deny,allow
+	    Allow from all
+    </Location>
+	
+    # Munin
+    Alias /munin /var/www/munin
+    <Directory "/var/www/munin">
+        AuthType Basic
+        AuthName "Munin"
+        AuthUserFile /etc/apache2/htpasswd
+        Options FollowSymLinks Indexes MultiViews
+        AllowOverride FileInfo
+        #RewriteEngine On
+        #RewriteCond %{HTTPS} off
+        #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+        require valid-user
+        Order deny,allow
+        Allow from all
+    </Directory>
+    
+    # Webalizer
+    Alias /webalizer /var/www/webalizer
+    <Directory "/var/www/webalizer">
+        AuthType Basic
+        AuthName "Munin"
+        AuthUserFile /etc/apache2/htpasswd
+        Options FollowSymLinks Indexes MultiViews
+        AllowOverride None
+        require valid-user
+	    Order deny,allow
+	    Allow from all
+    </Directory>
+
+</VirtualHost>

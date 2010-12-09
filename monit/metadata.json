@@ -1,0 +1,65 @@
+{
+    "version": "0.5.0",
+    "providing": {
+    },
+    "attributes": {
+      "monit/poll_period": {
+        "required": "recommended",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "How often to perform checks (in seconds)"
+      },
+      "monit/notify_email": {
+        "required": "recommended",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "The email address to send alerts to."
+      },
+      "monit/poll_start_delay": {
+        "required": "recommended",
+        "calculated": false,
+        "choice": [
+
+        ],
+        "type": "string",
+        "recipes": [
+
+        ],
+        "description": "When monit first starts, how long to delay before it starts performing checks"
+      }
+    },
+    "maintainer": "Alex Soto",
+    "replacing": {
+    },
+    "dependencies": {
+    },
+    "maintainer_email": "apsoto@gmail.com",
+    "groupings": {
+    },
+    "recommendations": {
+    },
+    "license": "Apache 2.0",
+    "long_description": "",
+    "suggestions": {
+    },
+    "name": "monit",
+    "recipes": {
+    },
+    "conflicting": {
+    },
+    "platforms": {
+    },
+    "description": "Configures monit.  Originally based off the 37 Signals Cookbook."
+  }

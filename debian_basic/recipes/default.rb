@@ -25,41 +25,5 @@ execute "Updating system (apt-get update)" do
   command "apt-get update"
 end
 execute "Upgrading default system (apt-get full-upgrade)" do
-  command "apt-get update"
-end
-
-packages = value_for_platform(
-  "default" => [
-    'aptitude',
-    'lsof',
-    'ack-grep',
-    'diff',
-    'diffutils',
-    'colordiff',
-    'htop',
-    'vim',
-    'libpcrecpp0',
-    'libpcre3', 
-    'libpcre3-dev', 
-    'libssl-dev', 
-    'libxml2-dev', 
-    'libxml2', 
-    'libxslt1-dev',
-    'libxslt1.1',
-    'libcurl4-gnutls-dev',
-    'libncurses5-dev',
-    'libreadline6-dev',
-    'libreadline-dev',
-    'dialog'
-  ]
-)
-
-
-case node[:platform]
-when "ubuntu","debian"
-  packages.each do |pkg|
-    package pkg do
-      action :install
-    end
-  end
+  command "apt-get -y full-upgrade"
 end

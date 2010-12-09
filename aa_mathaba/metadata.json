@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "maintainer_email": "YOUR_EMAIL",
+  "groupings": {
+  },
+  "attributes": {
+  },
+  "recommendations": {
+  },
+  "dependencies": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "license": "All rights reserved",
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
+  "recipes": {
+  },
+  "providing": {
+  },
+  "name": "aa_mathaba",
+  "maintainer": "YOUR_COMPANY_NAME",
+  "replacing": {
+  },
+  "platforms": {
+  },
+  "description": "Installs/Configures aa_mathaba"
+}

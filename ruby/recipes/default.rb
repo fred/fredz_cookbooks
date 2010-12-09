@@ -30,6 +30,8 @@ if node[:platform] =~ /ubuntu|debian/
     irb1.8
     libshadow-ruby1.8
     libopenssl-ruby
+    libxslt-ruby
+    libreadline-ruby
   }
 end
 

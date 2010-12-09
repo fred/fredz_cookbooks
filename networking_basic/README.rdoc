@@ -1,8 +1,96 @@
-= DESCRIPTION:
+= DESCRIPTION: 
 
-= REQUIREMENTS:
+<p>Install Basic Networking Tools and Utilities for Debian and Ubuntu.</p>
 
-= ATTRIBUTES:
+<ul>
+<li>
+<strong> - lsof : </strong>
+Lsof is a Unix-specific diagnostic tool.  
+Its name stands for LiSt Open Files, and it does just that.  
+It lists information about any files that are open, by processes currently running on the system.
+</li>
 
-= USAGE:
+<li>
+<strong> - iptables : </strong>
+administration tools for packet filtering and NAT
+These are the user-space administration tools for the Linux kernel's netfilter and iptables.
+netfilter and iptables provide a framework for stateful and stateless packet filtering, network and
+port address translation, and other IP packet manipulation. The framework is the successor to
+ipchains.
+</li>
 
+<li>
+<strong> - jwhois : </strong>
+Improved Caching Whois client
+GNU jwhois is an Internet Whois client that queries hosts for information according to RFC 954 -
+NICNAME/WHOIS. JWHOIS is configured via a configuration file that contains information about all
+known Whois servers. Upon execution, the host to query is selected based on the information in the
+configuration file.
+</li>
+<li>
+<strong> - whois : </strong>
+This is a new whois (RFC 3912) client rewritten from scratch. It is inspired from and compatible
+with the usual BSD and RIPE whois(1) programs. It is intelligent and can automatically select the
+appropriate whois server for most queries.
+</li>
+<li>
+<strong> - curl : </strong>
+Get a file from an HTTP, HTTPS or FTP server
+curl is a client to get files from servers using any of the supported protocols. The command is
+designed to work without user interaction or any kind of interactivity.
+</li>
+<li>
+<strong> - wget : </strong>
+Wget is a network utility to retrieve files from the Web using http(s) and ftp, the two most widely
+used Internet protocols. It works non-interactively, so it will work in the background, after
+having logged off. The program supports recursive retrieval of web-authoring pages as well as ftp
+sites -- you can use wget to make mirrors of archives and home pages or to travel the Web like a
+WWW robot.
+</li>
+<li>
+<strong> - rsync : </strong>
+rsync is a program that allows files to be copied to and from remote machines in much the same way
+as rcp.  It has many more options than rcp, and uses the rsync remote-update protocol to greatly
+speed up file transfers when the destination file already exists. 
+</li>
+<li>
+<strong> - jnettop : </strong>
+View hosts/ports taking up the most network traffic
+jNettop captures traffic coming across the host it is running on and displays streams sorted by
+bandwidth they use. Result is a nice listing of communication on network by host and port, how many
+bytes went through this transport and the bandwidth it is consuming.
+</li>
+<li>
+<strong> - nmap : </strong>
+Nmap is a utility for network exploration or security auditing. It supports ping scanning
+(determine which hosts are up), many port scanning techniques, version detection (determine service
+protocols and application versions listening behind ports), and TCP/IP fingerprinting (remote host
+OS or device identification). Nmap also offers flexible target and port specification,
+decoy/stealth scanning, sunRPC scanning, and more. Most Unix and Windows platforms are supported in
+both GUI and commandline modes. Several popular handheld devices are also supported, including the
+Sharp Zaurus and the iPAQ.
+</li>
+<li>
+<strong> - traceroute : </strong>
+</li>
+<li>
+<strong> - ethtool : </strong>
+</li>
+<li>
+<strong> - iproute : </strong>
+</li>
+<li>
+<strong> - iputils-ping : </strong>
+</li>
+<li>
+<strong> - netcat-openbsd : </strong>
+</li>
+<li>
+<strong> - tcpdump : </strong>
+</li>
+<li>
+<strong> - elinks : </strong>
+</li>
+<li>
+<strong> - lynx : </strong>
+</ul>

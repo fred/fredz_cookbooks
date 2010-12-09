@@ -33,7 +33,7 @@ bash "Install Rubygems from Source" do
   code <<-EOH
     tar xpf rubygems-#{rubygems_version}.tgz
     cd rubygems-#{rubygems_version} 
-    ruby ./setup.rb
+    ruby ./setup.rb --no-format-executable
   EOH
   not_if do
     system("which gem >> /dev/null") &&
