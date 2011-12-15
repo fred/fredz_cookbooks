@@ -19,3 +19,24 @@ default[:debian][:install_list] = [
   'elinks',
   'lynx'
 ]
+
+default[:redhat][:install_list] = [
+  'lsof',
+  'iptables',
+  'jwhois',
+  'curl',
+  'wget',
+  'rsync',
+  'jnettop',
+  'nmap',
+  'traceroute',
+  'ethtool',
+  'iproute',
+  'iputils,
+  'nc',
+  'tcptraceroute',
+  'tcputils',
+  'tcpdump',
+  'elinks',
+  'lynx'
+]
