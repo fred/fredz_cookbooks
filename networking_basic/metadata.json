@@ -1,9 +1,9 @@
 {
-    "version": "0.0.2",
+    "version": "0.0.3",
     "maintainer": "fredz",
     "replacing": {
     },
-    "description": "Install Basic Netwoking Tools ans Utilities on Debian5 and Ubuntu10",
+    "description": "Install Basic Netwoking Tools ans Utilities on Debian, Ubuntu, CentOS, and RHEL",
     "recipes": {
     },
     "maintainer_email": "fred@frederico-araujo.com",
