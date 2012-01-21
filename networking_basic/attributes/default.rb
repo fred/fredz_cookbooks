@@ -21,21 +21,21 @@ default[:debian][:install_list] = [
 ]
 
 default[:redhat][:install_list] = [
-  'lsof',
-  'iptables',
-  'jwhois',
-  'curl',
-  'wget',
-  'rsync',
-  'nmap',
-  'traceroute',
-  'ethtool',
-  'iproute',
-  'iputils',
-  'nc',
-  'tcptraceroute',
-  'tcputils',
-  'tcpdump',
-  'elinks',
-  'lynx'
+  'lsof',
+  'iptables',
+  'jwhois',
+  'curl',
+  'wget',
+  'rsync',
+  'nmap',
+  'traceroute',
+  'ethtool',
+  'iproute',
+  'iputils',
+  'nc',
+  'tcptraceroute',
+  'tcputils',
+  'tcpdump',
+  'elinks',
+  'lynx'
 ]

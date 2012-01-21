@@ -3,7 +3,7 @@
     "maintainer": "fredz",
     "replacing": {
     },
-    "description": "Install Basic Netwoking Tools ans Utilities on Debian, Ubuntu, CentOS, and RHEL",
+    "description": "Install Basic Networking Tools and Utilities on Debian, Centos RedHat and Ubuntu",
     "recipes": {
     },
     "maintainer_email": "fred@frederico-araujo.com",
@@ -26,10 +26,12 @@
     },
     "platforms": {
       "debian": [
-
       ],
       "ubuntu": [
-
+      ],
+      "redhat": [
+      ],
+      "centos": [
       ]
     }
   }

@@ -2,9 +2,6 @@
 # Cookbook Name:: networking_basic
 # Recipe:: default
 #
-# Copyright 2010, fredz
-#
-# All rights reserved - Do Not Redistribute
 #
 
 case node[:platform]
