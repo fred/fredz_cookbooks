@@ -1,12 +1,12 @@
 {
     "version": "0.0.3",
-    "maintainer": "fredz",
+    "maintainer": "Frederico Araujo, Tim Smith",
     "replacing": {
     },
     "description": "Install Basic Networking Tools and Utilities on Debian, Centos RedHat and Ubuntu",
     "recipes": {
     },
-    "maintainer_email": "fred@frederico-araujo.com",
+    "maintainer_email": "fred.the.master@gmail.com, tim.smith@webtrends.com",
     "groupings": {
     },
     "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
