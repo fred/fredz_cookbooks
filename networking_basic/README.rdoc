@@ -1,6 +1,6 @@
 = DESCRIPTION: 
 
-<p>Install Basic Networking Tools and Utilities for Debian and Ubuntu.</p>
+<p>Install Basic Networking Tools and Utilities for Debian, Ubuntu, CentOS, and Redhat.</p>
 
 <ul>
 <li>
