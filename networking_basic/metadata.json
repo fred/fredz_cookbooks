@@ -1,6 +1,6 @@
 {
-    "version": "0.0.3",
-    "maintainer": "Frederico Araujo, Tim Smith",
+    "version": "0.0.5",
+    "maintainer": "Frederico Araujo, Tim Smith, atomic-penguin (Eric G. Wolfe)",
     "replacing": {
     },
     "description": "Install Basic Networking Tools and Utilities on Debian, Centos RedHat and Ubuntu",
