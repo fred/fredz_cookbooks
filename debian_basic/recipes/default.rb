@@ -2,14 +2,11 @@
 # Cookbook Name:: debian_basic
 # Recipe:: default
 #
-# Copyright 2010, YOUR_COMPANY_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
 
 template "/etc/apt/sources.list" do
   mode 0644
   variables :code_name => node[:lsb][:codename]
+  variables :country_mirror => node[:debian_basic][:country_mirror]
   case node[:platform]
   when "ubuntu"
     source "ubuntu.sources.list.erb"    
@@ -19,8 +16,6 @@ template "/etc/apt/sources.list" do
   
 end
 
-# update and upgrade system
-# Warning
 execute "Updating system (apt-get update)" do
   command "apt-get update"
 end

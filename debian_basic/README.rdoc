@@ -1,6 +1,6 @@
 = DESCRIPTION: 
 
-Boostrap a Debian 5 and Ubuntu 10.04 Server with basic packages and libraries for development and update sources file.
+Boostrap a Debian and Ubuntu Servers with base /etc/apt/sources.list and run full-upgrade.
 
 = REQUIREMENTS: 
 

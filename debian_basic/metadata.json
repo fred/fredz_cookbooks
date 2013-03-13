@@ -1,9 +1,9 @@
 {
-    "version": "0.0.2",
+    "version": "0.0.3",
     "maintainer": "fredz",
     "replacing": {
     },
-    "description": "Install Basic Packages on a Debian 5 and Ubuntu 10.04 Server",
+    "description": "Boostrap a Debian and Ubuntu Servers with base /etc/apt/sources.list and run full-upgrade",
     "recipes": {
     },
     "maintainer_email": "fred@frederico-araujo.com",

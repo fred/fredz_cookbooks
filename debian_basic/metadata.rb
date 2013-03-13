@@ -1,9 +1,9 @@
 maintainer       "fredz"
-maintainer_email "fred@frederico-araujo.com"
+maintainer_email "fred.the.master@gmail.com"
 license          "Apache 2.0"
-description      "Boostrap a Debian 5 and Ubuntu 10.04 Server with basic packages and libraries"
+description      "Boostrap a Debian and Ubuntu Servers with base /etc/apt/sources.list and run full-upgrade"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
-version          "0.0.2"
+version          "0.0.3"
 
 %w{ ubuntu debian }.each do |os|
   supports os
