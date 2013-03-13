@@ -19,11 +19,11 @@
   },
   "providing": {
   },
-  "name": "aa_mathaba",
+  "name": "utilities",
   "maintainer": "YOUR_COMPANY_NAME",
   "replacing": {
   },
   "platforms": {
   },
-  "description": "Installs/Configures aa_mathaba"
+  "description": "Installs/Configures utilities"
 }
