@@ -13,7 +13,6 @@ template "/etc/apt/sources.list" do
   when "debian"
     source "debian.sources.list.erb"
   end
-  
 end
 
 execute "Updating system (apt-get update)" do
